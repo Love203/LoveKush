@@ -1,0 +1,35 @@
+
+
+<html>
+<body>
+<script language="javascript">
+
+function admSelectCheck(nameSelect)
+{
+    if(nameSelect){
+        admOptionValue = document.getElementById("admOption").value;
+        if(admOptionValue != 0){
+            document.getElementById("admDivCheck").style.display = "";
+        }
+        else{
+            document.getElementById("admDivCheck").style.display = "none";
+        }
+    }
+    else{
+        document.getElementById("admDivCheck").style.display = "none";
+    }
+}
+
+</script>
+<select id="getFname" onchange="admSelectCheck(this.select);">
+<option value="1">Jay</option>
+<option value="4">Sam</option>
+<option id="admOption" value="0">Admin</option>
+</select>
+
+
+<div id="admDivCheck" style="display:none;">
+admin selected
+</div>
+</html>
+</body>

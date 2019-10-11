@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table {
+  padding: 100px;
+  border-collapse: collapse;
+  width: 40%;
+  background:gold;
+  
+}
+body{
+background:Lavender;
+
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  
+  background-color:Cornsilk;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<body color='blue'>
+
+<H1>Client Experience Reord</H1>
+
+        
+{% for i in result %}
+<center>
+<div style="height:100%; width:100%; color:black; 
+            border:1px solid; background-color: 009900;"> 
+     
+ <table>
+{% for key, value in i.items() %}
+
+  <tr>
+        <th> {{ key }} </th>
+		 {% if value=='Smile'%}
+		 <td><img width="40%" height="20%" src="{{url_for('static', filename='download.png')}}" /></td>
+         {% elif value=='Smile2'%}
+		       <td><img width="40%" height="20%" src="{{url_for('static', filename='sad.jpg')}}" /></td> 
+        {% else  %}
+		<td> {{ value }} </td>
+        {% endif %}>
+  </tr>
+   
+
+{% endfor %}
+</table>
+</div></center>
+{% endfor %}
+
+
+
+
+</body>
+</html>

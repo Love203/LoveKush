@@ -1,0 +1,24 @@
+
+<html>
+<body>
+<script language="javascript">
+
+function admSelectCheck(nameSelect)
+{
+    if(nameSelect){
+        admOptionValue = document.getElementById("admOption").value;
+        if(admOptionValue != 0){
+            document.getElementById("admDivCheck").style.display = "";
+        }
+        else{
+            document.getElementById("admDivCheck").style.display = "none";
+        }
+    }
+    else{
+        document.getElementById("admDivCheck").style.display = "none";
+    }
+}
+
+</script>
+</body>
+</html>
